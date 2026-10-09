@@ -48,8 +48,9 @@
 
 // *************** IMU ***************
 // ICM42688P is auto-detected by the ICM42605 driver (shared WHO_AM_I table)
+// CW90 comes from the board's factory Betaflight config (gyro_1_sensor_align)
 #define USE_IMU_ICM42605
-#define IMU_ICM42605_ALIGN      CW270_DEG
+#define IMU_ICM42605_ALIGN      CW90_DEG
 #define ICM42605_SPI_BUS        BUS_SPI1
 #define ICM42605_CS_PIN         PA4
 
@@ -123,6 +124,11 @@
 #define USE_PINIOBOX
 #define PINIO1_PIN              PC4
 #define PINIO2_PIN              PC5
+
+// *************** VTX ***************
+#define USE_VTX_COMMON
+#define USE_VTX_TRAMP
+#define USE_VTX_SMARTAUDIO
 
 // *************** LED strip ***************
 #define USE_LED_STRIP
